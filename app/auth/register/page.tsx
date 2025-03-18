@@ -1,6 +1,7 @@
 import { Outfit } from 'next/font/google';
 import RegisterForm from '@/app/components/auth/RegisterForm';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 const outfit = Outfit({ subsets: ['latin'] });
 
@@ -18,6 +19,12 @@ export default function RegisterPage() {
 			</p>
 
 			<RegisterForm />
+			<nav className='mt-10 flex flex-col '>
+				<Link href='/auth/login' className='text-center text-gray-500'>
+					Have and account? click here to
+					<span className='text-amber-500'> Login </span>
+				</Link>
+			</nav>
 		</div>
 	);
 }
