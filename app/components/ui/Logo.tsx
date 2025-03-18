@@ -1,13 +1,16 @@
-import Image from 'next/image';
-// import logo from '/logo.png';
+import { DynaPuff } from 'next/font/google';
+
+const emblema = DynaPuff({ weight: '400', subsets: ['latin'] });
+
 export default function Logo() {
 	return (
-		<Image
-			src='/logo.png'
-			alt='logo budget hero'
-			width={500} // Adjust these values to match your image dimensions
-			height={500} // Adjust these values to match your image dimensions
-			layout='intrinsic' // You can try different layouts like 'fixed', 'responsive', etc.
-		/>
+		<>
+			<div className={`${emblema.className} flex gap-4 p-4`}>
+				<span className='text-5xl'>💰</span>
+				<p className='text-5xl text-white'>
+					Budget<span className='text-orange-500'>Hero</span>
+				</p>
+			</div>
+		</>
 	);
 }
