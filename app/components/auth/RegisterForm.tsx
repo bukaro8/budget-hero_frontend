@@ -1,9 +1,11 @@
 'use client';
 
+import { register } from '@/app/actions/create-account-action';
+
 const RegisterForm = () => {
 	return (
 		<>
-			<form className='mt-14 space-y-5' noValidate>
+			<form className='mt-14 space-y-5' noValidate action={register}>
 				<div className='flex flex-col gap-2'>
 					<input
 						id='email'
